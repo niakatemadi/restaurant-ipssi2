@@ -12,7 +12,7 @@ class Utilisateur{
         $query = $pdo->query($stmt, \PDO::FETCH_OBJ);
         $utilisateurs = $query->fetchAll();
 
-        require_once ROOT."/templates/utilisateur/index.php" ;
+       // require_once ROOT."/templates/utilisateur/index.php" ;
 
     }
 }

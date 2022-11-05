@@ -1,4 +1,16 @@
 {
-    "name": "",
-    "autoload": {}
+    "name": "madin/courspoo",
+    "autoload": {
+        "psr-4": {
+            "src\\":"src/",
+            "Core\\": "Core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Madi niakate",
+            "email": "madi.niakate@accenture.com"
+        }
+    ],
+    "require": {}
 }

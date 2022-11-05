@@ -36,7 +36,7 @@ class Database {
      * 
      * @var \PDO|null
      */
-    private ?\PDO $pdo ;
+    protected ?\PDO $pdo ;
 
     public function __construct()
     {
@@ -88,6 +88,24 @@ class Database {
     public function getPdo(): ?\PDO
     {
         return $this-> pdo;
+    }
+
+    protected function getData(string $stmt,bool $one = false): array|object
+    {
+        $query = $this->pdo->query($stmt, \PDO::FETCH_OBJ);
+        
+        if($one)
+        {
+            $data = $query->fetchAll();
+        }
+        else
+        {
+            $data = $query->fetch();
+        }
+
+        return $data ? $data : throw new \Exception("Aucune donnée n'a été trouvée");
+           
+        
     }
 }
 ?>
