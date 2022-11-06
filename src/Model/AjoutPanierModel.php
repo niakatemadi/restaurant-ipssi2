@@ -69,6 +69,7 @@ class AjoutPanierModel extends Database {
             $liste_ids = implode(',',$ids);
 
             $stmt="SELECT * FROM carte WHERE id IN ($liste_ids)";
+            session_start();
             $_SESSION['info_produits']= $this->getData($stmt,true);
            // var_dump($_SESSION['info_produits']);
         }

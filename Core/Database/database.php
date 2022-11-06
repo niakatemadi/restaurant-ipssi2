@@ -107,5 +107,10 @@ class Database {
            
         
     }
+    protected function postData(string $stmt,bool $one = false): void
+    {
+        $query = $this->pdo->query($stmt, \PDO::FETCH_OBJ);
+              
+    }
 }
 ?>

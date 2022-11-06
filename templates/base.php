@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Restaurant</a>
+                <a class="navbar-brand" href="/">Profil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,6 +25,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/?page=toutlesproduits">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?page=mes_reservations">Mes reservations</a>
                         </li>
                     </ul>
                 </div>

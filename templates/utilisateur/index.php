@@ -1,6 +1,6 @@
 
     <main class="container">
-        <h1 class="text-center">Nos utilisateurs</h1>
+        <h1 class="text-center">Mon profil</h1>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
