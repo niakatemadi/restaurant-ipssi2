@@ -13,6 +13,9 @@ use src\Model\AjoutPanierModel;
 use src\Model\AjoutCommandeModel;
 use src\Model\ReservationModel;
 
+use src\Controller\AccueilController;
+use src\Controller\ConnexionController;
+use src\Controller\InscriptionController;
 class Routeur
 {
     public static function routes()
@@ -43,10 +46,19 @@ class Routeur
                         break; 
                     case 'available_table':
                         (new ReservationModel)->getAvailableTable();
-                        break;    
+                        break;
+                    case 'accueil':
+                        (new AccueilController)->displayAccueil();
+                        break;
+                    case 'connexion':
+                        (new ConnexionController)->displayPageConnexion();
+                        break;
+                    case 'inscription':
+                        (new InscriptionController)->displayPageInscription();
+                        break;             
                 }
             } else {
-                (new UtilisateurController)->getUser();
+                (new AccueilController)->displayAccueil();
             }
         } catch (\Exception $e) {
             (new ErrorController)->error($e);

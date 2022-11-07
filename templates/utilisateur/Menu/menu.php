@@ -2,9 +2,10 @@
 <div class="Cards">
 <?php 
     session_start();
-    $nbre_produit_panier = array_sum($_SESSION['panier']) ? array_sum($_SESSION['panier']) : 0 ;
+    $nbre_produit_panier = !empty(array_sum($_SESSION['panier'])) ? array_sum($_SESSION['panier']) : 0 ;
 ?>
-    <p><a href="/?page=panier"> panier </a> <h5><?= $nbre_produit_panier ?></h5></p>
+    <h3><a href="/?page=panier"> panier </a> </h3>
+    <div class="d-flex flex-row"><p>Nombre de produit dans le panier : </p><p class="text-white">xx</p> <h5 class="text-danger"> <?= $nbre_produit_panier ?> </h5></div>
     <div class="d-flex flex-row flex-wrap justify-content-around">
     <?php foreach ($liste_produits as $produit) : ?>
         <div class="card" style="width: 18rem;">

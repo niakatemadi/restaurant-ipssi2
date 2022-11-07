@@ -20,8 +20,10 @@
         }
     
 ?>
+            <h4 class="text_white">Panier</h4>
+            <h4 class="text-white">Panier</h4>
+            <h2 class="text-center">Panier</h2>
             <p><a href="/?page=toutlesproduits">Retour</a></p>
-            <h4>Panier</h4>
             <tr>
                 <th>Nom</th>
                 <th>Prix</th>
@@ -43,7 +45,7 @@
                     </td>
                 </tr>
             <?php endforeach; ?>
-            <tr><td> <?= $total ? 'Total: '.$total.' €' : 'Votre panier est vide' ?></td></tr>
+            <tr><td><h4> <?= $total ? 'Total: '.$total.' €' : 'Votre panier est vide' ?></h4></td></tr>
             <tr>
                 <td>
                 <button type="button" class="btn btn-primary btn-lg btn-block">

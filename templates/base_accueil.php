@@ -11,24 +11,18 @@
     <title>restaurant</title>
 </head>
 <body>
-    <header class="fixed-top bg-info">
+    <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-            <a class="navbar-brand text-danger" href="/">Deconnexion</a>
-                <a class="navbar-brand" href="/?page=info_utilisateur">Profil</a>
+            <a class="navbar-brand" href="/">Accueil</a>
+                <a class="navbar-brand" href="/?page=connexion">Connexion</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/?page=info_mescommandes">Mes commandes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/?page=toutlesproduits">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/?page=mes_reservations">Mes reservations</a>
+                            <a class="nav-link" aria-current="page" href="/?page=inscription">Inscription</a>
                         </li>
                     </ul>
                 </div>
@@ -36,6 +30,7 @@
         </nav>
     </header>
     <main class="container">
+    <h1 class="text-white">xxx</h1>
         <!-- Ajouter contenu de main -->
         <?= $content ?>
     </main>
