@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../../../../ipssi_poo/BD232-POO"
+		},
+		{
+			"path": "../../../restaurant-ipssi"
 		}
 	],
 	"settings": {}
