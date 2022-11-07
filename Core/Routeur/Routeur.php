@@ -16,6 +16,10 @@ use src\Model\ReservationModel;
 use src\Controller\AccueilController;
 use src\Controller\ConnexionController;
 use src\Controller\InscriptionController;
+use src\Model\CreateInscriptionModel;
+use src\Model\SeConnecterModel;
+use src\Controller\SectionAdminController;
+use src\Model\CreateAdminModel;
 class Routeur
 {
     public static function routes()
@@ -55,6 +59,18 @@ class Routeur
                         break;
                     case 'inscription':
                         (new InscriptionController)->displayPageInscription();
+                        break; 
+                    case 'create_inscription':
+                        (new CreateInscriptionModel)->sendInscription();
+                        break;  
+                    case 'se_connecter':
+                        (new SeConnecterModel)->verifConnexion();
+                        break; 
+                    case 'section_admin':
+                        (new SectionAdminController)->displaySectionAdmin();
+                        break;   
+                    case 'create_admin':
+                        (new CreateAdminModel)->sendInscriptionAdmin();
                         break;             
                 }
             } else {

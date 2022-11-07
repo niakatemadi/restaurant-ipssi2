@@ -1,7 +1,9 @@
-<main>
+
+   <main>
 
 <h1 class="text-center"><?= $message_bienvenue ?></h1>
 <form method="post">
+    <h1> Créer un nouvel administrateur</h1>
   <div class="form-group">
     <label for="exampleInputEmail1">Nom</label>
     <input type="text" name="nom" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer votre nom">
@@ -51,6 +53,6 @@ if($validation){
 
   session_start();
 
-  header("Location:?page=create_inscription&nom=$_nom&pseudo=$_pseudo&email=$_email&password=$_password&ville=$_ville&adresse=$_adresse&prenom=$_prenom");
+  header("Location:?page=create_admin&nom=$_nom&pseudo=$_pseudo&email=$_email&password=$_password&ville=$_ville&adresse=$_adresse&prenom=$_prenom");
 } ?>
 </main>

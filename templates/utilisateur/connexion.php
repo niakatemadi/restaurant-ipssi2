@@ -3,8 +3,8 @@
 <h1 class="text-center"><?= $message_bienvenue ?></h1>
 <form method="post" action="">
   <div class="form-group">
-    <label for="exampleInputEmail1">Pseudo</label>
-    <input type="text" name="pseudo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer votre pseudo">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" name="pseudo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer votre pseudo">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Mot de passe</label>
@@ -18,9 +18,15 @@
 $pseudo = !empty($_POST['pseudo']) ? $_POST['pseudo'] : '';
 $password = !empty($_POST['password']) ? $_POST['password'] : '';
 
+if(!empty($pseudo) && !empty($password) )
+        {
+            header("Location:?page=se_connecter&pseudo=$pseudo&password=$password");
+        }
+
+/*
 if($pseudo=='madi' && $password=='madi' )
         {
             header("Location:?page=toutlesproduits");
-        }
+        }*/
 ?>
 </main>

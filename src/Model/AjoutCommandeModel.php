@@ -10,8 +10,8 @@ class AjoutCommandeModel extends Database {
         session_start();
         
         if($_GET['id_commande']){
-            var_dump($_GET['id_commande']);
-            var_dump($_SESSION['info_produits']);
+            //var_dump($_GET['id_commande']);
+            //var_dump($_SESSION['info_produits']);
             
             $id_utilisateur = 1;
             $id_commande = $_GET['id_commande'];
